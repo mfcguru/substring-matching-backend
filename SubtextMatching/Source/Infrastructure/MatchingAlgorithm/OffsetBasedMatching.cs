@@ -23,7 +23,7 @@ namespace SubtextMatching.Source.Infrastructure
                     if (position == NOTFOUND)
                         break;
 
-                    offset = position + subtext.Length;
+                    offset = position + 1;
                     result.Add(position);
                 }
 
