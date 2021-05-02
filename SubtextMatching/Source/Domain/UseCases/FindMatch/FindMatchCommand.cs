@@ -31,7 +31,7 @@ namespace SubtextMatching.Source.Domain.UseCases.FindMatch
                 var positions = await instance.FindAllOccurencesOfSubtext(request.dto.Text.ToLower(), request.dto.Subtext.ToLower());
                 if (positions.Count == 0)
                 {
-                    throw new SubstringMatchIsNotFoundException();
+                    throw new SubtextMatchIsNotFoundException();
                 }
 
                 var result = new FindMatchCommandResultDto 

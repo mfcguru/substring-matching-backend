@@ -2,11 +2,11 @@
 
 namespace SubtextMatching.Source.Domain.BusinessRules
 {
-    public class SubstringMatchIsNotFoundException : BusinessRulesException
+    public class SubtextMatchIsNotFoundException : BusinessRulesException
     {
         private const string message = "Business Rules Exception: Subtext match was not found.";
 
-        public SubstringMatchIsNotFoundException() : base(HttpStatusCode.BadRequest, message) { }
+        public SubtextMatchIsNotFoundException() : base(HttpStatusCode.BadRequest, message) { }
     }
 }
 
