@@ -12,6 +12,8 @@ namespace SubtextMatching.Tests
     using SubtextMatching.Source.Domain.UseCases.FindMatch;
     using SubtextMatching.Source.Infrastructure;
 
+    using POSITION = System.Int32;    
+
     [TestClass]
     public class FindMatch
     {
@@ -23,7 +25,7 @@ namespace SubtextMatching.Tests
             // return an empty list of positions
             var mockAlogirthm = new Mock<IMatchingAlgorithm>();
             mockAlogirthm.Setup(o => o.FindAllOccurencesOfSubtext(It.IsAny<string>(), It.IsAny<string>()))
-                .Returns<string, string>((text, subtext) => Task.FromResult(new List<int>()));
+                .Returns<string, string>((text, subtext) => Task.FromResult(new List<POSITION>()));
 
             // setup mock factory for dependency injection
             var mockFactory = new Mock<IMatchingAlgorithmFactory>();
