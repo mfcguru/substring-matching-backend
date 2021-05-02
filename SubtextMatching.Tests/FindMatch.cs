@@ -17,7 +17,7 @@ namespace SubtextMatching.Tests
     {
         [TestMethod]
         [ExpectedException(typeof(SubtextMatchIsNotFoundException))]
-        public async Task SubtextgMatchIsNotFound()
+        public async Task SubtextMatchIsNotFound()
         {
             var mockAlogirthm = new Mock<IMatchingAlgorithm>();
             mockAlogirthm.Setup(o => o.FindAllOccurencesOfSubtext(It.IsAny<string>(), It.IsAny<string>()))
